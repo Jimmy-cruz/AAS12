@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ValidacionDirective } from '../directivas/validacion.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +11,10 @@ import { ValidacionDirective } from '../directivas/validacion.directive';
     HomeComponent, ValidacionDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
+    
   ],
   exports: [
     HomeComponent, ValidacionDirective

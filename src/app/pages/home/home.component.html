@@ -2,39 +2,47 @@
 
 <div class="p-8 mt-10 w-3/4 mx-auto border-4 border-cyan-300 ">
     <!-- formulario de contacto -->
-    <form action="">
+    <form [formGroup]="formContacto" (submit)="send()">
         <div class="text-center">
             <h2 class="text-cyan-500 text-xl">Formulario de Contacto</h2>
         </div>
         <div>
             <div validar class="my-10">
                 <label for="nombre">Nombre*</label>
-                <input validar class="border-b-2 w-full" type="text" placeholder="" #nombre>
+                <input validar class="border-b-2 w-full" formControlName="nombre" [(ngModel)]="nombre" type="text" placeholder="">
             </div>
             <div validar class="my-10">
-                <label for="nombre">Email*</label>
-                <input validar class="border-b-2 w-full" type="text" placeholder="">
+                <label for="email">Email*</label>
+                <input validar class="border-b-2 w-full" formControlName="email" type="text" placeholder="">
             </div>
             <div validar class="my-10">
-                <label for="nombre">Telefono</label>
-                <input validar class="border-b-2 w-full" type="text" placeholder="">
+                <label for="telefono">Telefono</label>
+                <input validar class="border-b-2 w-full" formControlName="telefono" type="text" placeholder="">
             </div>
             <div validar class="my-10">
-                <label for="nombre">Asunto*</label>
-                <input validar class="border-b-2 w-full" type="text" placeholder="">
+                <label for="asunto">Asunto*</label>
+                <input validar class="border-b-2 w-full" formControlName="asunto" type="text" placeholder="">
             </div>
             <div validar class="my-10">
-                <label for="nombre">Mensaje*</label>
-                <textarea validar class="border-b-2 w-full" type="text" placeholder=""></textarea>
+                <label for="mensaje">Mensaje*</label>
+                <textarea validar class="border-b-2 w-full" formControlName="mensaje" type="text" placeholder=""></textarea>
             </div>
         </div>
         <div>
             <div class="text-center">
-                <button class="bg-slate-200 w-24" (click)="enviar()">
+                <button class="bg-slate-200 w-24" [disabled]="formContacto.invalid">
                     <p>Enviar</p>
                 </button>
             </div>
         </div>
     </form>
     
+</div>
+<div class="bg-black p-4 text-white text-1xl text-yellow-400">
+    Status - <span class="text-red-500">{{formContacto.valid}}</span>
+</div>
+
+
+<div class="bg-black p-4 text-white text-1xl text-yellow-400 mt-4">
+    {{formContacto.value | json}}
 </div>
