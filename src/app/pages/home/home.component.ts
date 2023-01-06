@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  color = 'red';
+  enviar(){
+    alert('GRACIAS POR COMUNICARNOS CON NOSOTROS')
+  }
 }

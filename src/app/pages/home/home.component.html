@@ -1,35 +1,36 @@
 <!-- <p>home works!</p> -->
 
 <div class="p-8 mt-10 w-3/4 mx-auto border-4 border-cyan-300 ">
+    <!-- formulario de contacto -->
     <form action="">
         <div class="text-center">
             <h2 class="text-cyan-500 text-xl">Formulario de Contacto</h2>
         </div>
         <div>
-            <div class="my-10">
+            <div validar class="my-10">
                 <label for="nombre">Nombre*</label>
-                <input class="border-b-4 w-full" type="text" placeholder="Nombre*">
+                <input validar class="border-b-2 w-full" type="text" placeholder="" #nombre>
             </div>
-            <div class="my-10">
+            <div validar class="my-10">
                 <label for="nombre">Email*</label>
-                <input class="border-b-4 w-full" type="text" placeholder="Email*">
+                <input validar class="border-b-2 w-full" type="text" placeholder="">
             </div>
-            <div class="my-10">
+            <div validar class="my-10">
                 <label for="nombre">Telefono</label>
-                <input class="border-b-4 w-full" type="text" placeholder="Telefono">
+                <input validar class="border-b-2 w-full" type="text" placeholder="">
             </div>
-            <div class="my-10">
+            <div validar class="my-10">
                 <label for="nombre">Asunto*</label>
-                <input class="border-b-4 w-full" type="text" placeholder="Asunto*">
+                <input validar class="border-b-2 w-full" type="text" placeholder="">
             </div>
-            <div class="my-10">
+            <div validar class="my-10">
                 <label for="nombre">Mensaje*</label>
-                <textarea class="border-b-4 w-full" type="text" placeholder="Mensaje*"></textarea>
+                <textarea validar class="border-b-2 w-full" type="text" placeholder=""></textarea>
             </div>
         </div>
         <div>
             <div class="text-center">
-                <button class="bg-slate-200 w-24" >
+                <button class="bg-slate-200 w-24" (click)="enviar()">
                     <p>Enviar</p>
                 </button>
             </div>
